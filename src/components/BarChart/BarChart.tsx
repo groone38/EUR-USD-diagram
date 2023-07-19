@@ -37,7 +37,12 @@ export const options = {
   },
 };
 
-const AreaChart = ({ data, labels }: any) => {
+interface AreaChartProps {
+  data: DataResponse[];
+  labels: string[];
+}
+
+const AreaChart = ({ data, labels }: AreaChartProps) => {
   const values = {
     labels,
     datasets: [
