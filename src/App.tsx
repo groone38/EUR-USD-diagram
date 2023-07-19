@@ -2,24 +2,10 @@ import React, { useEffect, useState } from "react";
 import classes from "./App.module.scss";
 import back from "./assets/img/back.jpg";
 import axios from "axios";
-import { time } from "./core/time";
+import { d, h, hs, m, time, w } from "./core/time";
 import { DataResponse, IResponse } from "./types/Response";
 import Loader from "./components/Loader/Loader";
 import AreaChart from "./components/BarChart/BarChart";
-
-const w = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
-const d = ["8:00", "12:00", "16:00", "20:00", "00:00"];
-const hs = ["1", "2", "3", "4", "5"];
-const h = ["25:00", "50:00", "1"];
-const m = ["0", "15:00"];
 
 const App = () => {
   const [data, setData] = useState<DataResponse[]>([]);
@@ -69,10 +55,10 @@ const App = () => {
     <div className={classes.app}>
       <img src={back} alt="back" />
 
-      <div className={classes.block}>
-        {loading ? (
-          <Loader />
-        ) : (
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className={classes.block}>
           <>
             <div className={classes.header}>
               <span className={classes.price}>EUR/USD Price Chart</span>
@@ -115,8 +101,8 @@ const App = () => {
               ))}
             </div>
           </>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
