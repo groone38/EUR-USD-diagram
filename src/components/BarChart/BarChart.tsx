@@ -11,7 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { DataResponse } from "src/types/Response";
+import { DataResponse } from "../../types/Response";
 
 ChartJS.register(
   CategoryScale,
@@ -44,7 +44,7 @@ const AreaChart = ({ data, labels }: any) => {
       {
         fill: true,
         label: "Open/Close",
-        data: data.map((item: DataResponse) => item?.o),
+        data: data?.map((item: DataResponse) => item?.o),
         borderColor: "rgb(53, 162, 235)",
         backgroundColor: "rgba(53, 162, 235, 0.5)",
       },
