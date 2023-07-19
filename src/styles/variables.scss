@@ -1,0 +1,27 @@
+:root {
+  --font-family-main: consolas, "Times New Roman", serif;
+
+  --value-text-size: calc(15px + 1vw);
+  --value-text-line: 30px;
+  --font-value-text: var(--value-text-size) / var(--value-text-line)
+    var(--font-family-main);
+
+  --value-head-size: calc(13px + 1vw);
+  --value-head-line: 20px;
+  --font-value-head: var(--value-head-size) / var(--value-head-line)
+    var(--font-family-main);
+
+  --time-text-size: calc(12px + 1vw);
+  --time-text-line: 20.4px;
+  --font-time-text: var(--time-text-size) / var(--time-text-line)
+    var(--font-family-main);
+
+  --header-text-size: calc(14px + 1vw);
+  --header-text-line: 21.85px;
+  --font-header-text: var(--header-text-size) / var(--header-text-line)
+    var(--font-family-main);
+
+  --primary: rgba(255, 255, 255, 1);
+  --secondary: rgba(141, 141, 141, 1);
+  --accent: rgba(114, 237, 147, 1);
+}
